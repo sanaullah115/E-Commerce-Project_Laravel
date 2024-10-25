@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Set a fixed height for images and make sure they cover the entire space */
+    .fruite-img img {
+        width: 100%;
+        height: 250px; /* Adjust this value to control the height */
+        object-fit: cover; /* Ensure the image fills the space without stretching */
+    }
+
+    /* Style for the product card */
+    .fruite-item {
+        height: 100%; /* Ensure the card takes full height of its container */
+        display: flex;
+        flex-direction: column; /* Align content vertically */
+        justify-content: space-between; /* Space out content */
+    }
+
+    /* Ensure the image and content fit within the card */
+    .fruite-img {
+        flex: 1; /* Allow image section to grow */
+    }
+
+    .fruite-item .p-4 {
+        flex: 1; /* Allow text content to take up remaining space */
+    }
+
+    /* For smaller screens, ensure cards are evenly sized */
+    @media (max-width: 768px) {
+        .fruite-item {
+            height: auto; /* Allow cards to be auto-sized on smaller screens */
+        }
+    }
+
+    /* Additional styling for the category badge */
+    .position-absolute {
+        z-index: 10; /* Ensure it stays on top of the image */
+        background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for better readability */
+    }
+</style>
+<body>
+    
+</body>
+</html>
